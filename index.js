@@ -47,7 +47,13 @@ sortData('Anbcdoa')
 
 // remove number from a string
 function removeNumber(ele){
-  return ele.match(/\d+/)
+  return ele.match(/\d+/g).join('');
 
 }
 console.log(removeNumber('wer45y678op'))
+//search a element ina sorting
+function searchEle(str,ele){
+ let data = str.split('').filter(e => e == ele);
+ console.log(data)
+}
+searchEle('ancktrytu','t')
