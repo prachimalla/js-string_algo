@@ -118,3 +118,26 @@ var searchInsert = function (nums, target) {
   console.log(nums);
 };
 //searchInsert([1, 3, 4, 7, 8], 5);
+
+
+var lengthOfLongestSubstring = function(s) {
+  let subStr = []; 
+   for(let i=0;i<s.length;i++){
+    console.log(subStr )
+       if(subStr.length != 0){
+           for(let j = 0;j<subStr.length;j++){
+               if(s[i] == subStr[j] ){
+                console.log('subStr',subStr,j)
+               subStr.splice(0,j+1);
+              
+               }
+     } 
+     subStr.push(s[i] ) 
+       }else {
+        subStr.push(s[i] ) 
+        
+       }
+   }
+   return subStr;
+};
+console.log(lengthOfLongestSubstring('abcabbc'))
